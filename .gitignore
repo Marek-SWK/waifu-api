@@ -5,12 +5,37 @@
 # Secrets
 .env
 .env.preprod
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+/config/s3.json
 
-#LLM
-.claude
+# Backups and databases
+*.sql
+*.sql.gz
+*.dump
+*.backup
+*.sqlite
+*.db
+
+# Generated files
+node_modules/
+dist/
+build/
+obj/
+*.log
 
 # Docs
 docs/node_modules
 docs/build
 docs/.docusaurus
 docs/docs/api
+
+# Local image collections
+images/
+thumbnails/
+EOF

@@ -17,6 +17,7 @@ interface Window {
     VITE_IMG_WIDTH_PARAM?: string;
     VITE_IMG_CARD_WIDTH?: string;
     VITE_IMG_PREVIEW_WIDTH?: string;
+    VITE_CDN_URL?: string;
   }
 }
 
@@ -36,6 +37,7 @@ interface ImportMetaEnv {
   readonly VITE_IMG_WIDTH_PARAM?: string
   readonly VITE_IMG_CARD_WIDTH?: string
   readonly VITE_IMG_PREVIEW_WIDTH?: string
+  readonly VITE_CDN_URL?: string
 }
 
 interface ImportMeta {

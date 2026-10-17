@@ -1,0 +1,27 @@
+
+{
+  "identities": [
+    {
+      "name": "waifu-api",
+      "credentials": [
+        {
+          "accessKey": "REPLACE_WITH_ACCESS_KEY",
+          "secretKey": "REPLACE_WITH_SECRET_KEY"
+        }
+      ],
+      "actions": [
+        "Admin",
+        "Read:waifu-images",
+        "Write:waifu-images",
+        "List:waifu-images",
+        "Tagging:waifu-images"
+      ]
+    },
+    {
+      "name": "anonymous",
+      "actions": [
+        "Read:waifu-images"
+      ]
+    }
+  ]
+}
