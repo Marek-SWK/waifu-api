@@ -147,5 +147,7 @@ A huge thank you to our community contributors who help expand our database:
 
 <div align="center">
   <sub>Original Version built with ♥️ by the waifu.im-team</sub>
-  <sub>Forked and maintained now with ♥️ by @Marek-SWK</sub>
+</div>
+<div align="center">
+  <sub><sub>Forked and maintained now by @Marek-SWK</sub>
 </div>
