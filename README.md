@@ -1,9 +1,9 @@
 <div align="center">
-  <a href="https://waifu.im">
-    <img src="https://cdn.waifu.im/7892.jpg" alt="Waifu.im Logo" width="200" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+  <a href="https://waifu.marek-server.com">
+    <img src="https://cdn.marek-server.com/7892.jpg" alt="Waifu.im Logo" width="200" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
   </a>
 
-  <h1>Waifu.im API</h1>
+  <h1>Waifu API-Fork</h1>
 
   <p>
     <strong>The versatile waifu image provider.</strong><br>
@@ -11,9 +11,9 @@
   </p>
 
   <p>
-    <a href="https://waifu.im"><strong>Website</strong></a> •
-    <a href="https://docs.waifu.im"><strong>Documentation</strong></a> •
-    <a href="https://waifu.im/contact/"><strong>Support</strong></a>
+    <a href="https://waifu.marek-server.com"><strong>Website</strong></a> •
+    <a href="https://docs.marek-server.com"><strong>Documentation (WIP)</strong></a> •
+    <a href="https://marek-server.com/contact/"><strong>Support</strong></a>
   </p>
 
   <p>
@@ -79,8 +79,8 @@ Deploy your own instance of the Waifu.im API using Docker.
    API_BASE_PATH="/"
 
    # Frontend
-   VITE_API_URL="https://api.waifu.im"
-   VITE_DISCORD_REDIRECT_URI="https://www.waifu.im/auth/callback"
+   VITE_API_URL="https://api.marek-server.com"
+   VITE_DISCORD_REDIRECT_URI="https://waifu.marek-server.com/auth/callback"
    ```
 
 3. **Launch**
@@ -146,5 +146,6 @@ A huge thank you to our community contributors who help expand our database:
 - **[Ruhannn](https://github.com/Ruhannn)** - Curated the `kamisato-ayaka` tag collection.
 
 <div align="center">
-  <sub>Built with ❤️ by the Waifu.im team.</sub>
+  <sub>Original Version built with ♥️ by the waifu.im-team</sub>
+  <sub>Forked and maintained now with ♥️ by @Marek-SWK</sub>
 </div>
