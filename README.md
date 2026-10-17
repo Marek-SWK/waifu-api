@@ -146,8 +146,8 @@ A huge thank you to our community contributors who help expand our database:
 - **[Ruhannn](https://github.com/Ruhannn)** - Curated the `kamisato-ayaka` tag collection.
 
 <div align="center">
-  <sub>Original Version built with ♥️ by the waifu.im-team</sub>
+  <sub>Original version built with ♥️ by the waifu.im team</sub>
+  <br>
+  <sub>Forked and maintained by <a href="https://github.com/Marek-SWK">Marek-SWK</a></sub>
 </div>
-<div align="center">
-  <sub><sub>Forked and maintained now by @Marek-SWK</sub>
-</div>
+
