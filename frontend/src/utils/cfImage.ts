@@ -9,15 +9,14 @@ import { getEnv } from './env';
 function thumbnail(url: string, width: 640 | 1280): string {
     try {
         const u = new URL(url);
-
         const cdnBaseUrl = getEnv('VITE_CDN_URL');
 
-        if (!cdnBaserUrl) {
-            return url;
-        }
+        if (!cdnBaseUrl) return url;
 
-        // Only transform URLs from our own CDN.
-        if (u.hostname !== CDN_HOST) {
+        const cdn = new URL(cdnBaseUrl);
+
+        // Only use thumbnails for images from our CDN
+        if (u.origin !== cdn.origin) {
             return url;
         }
 
@@ -35,11 +34,11 @@ function thumbnail(url: string, width: 640 | 1280): string {
     }
 }
 
-/** Small thumbnails for gallery and image cards. */
+// Small thumbnails for gallery and image cards
 export const imgCard = (url: string): string =>
     thumbnail(url, 640);
 
-/** Larger thumbnails for previews and home page. */
+// Larger thumbnails for previews and home page
 export const imgPreview = (url: string): string =>
     thumbnail(url, 1280);
 

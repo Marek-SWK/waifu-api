@@ -17,7 +17,7 @@ echo "  VITE_IMG_TRANSFORM_PATH: \"${VITE_IMG_TRANSFORM_PATH}\"," >> /usr/share/
 echo "  VITE_IMG_WIDTH_PARAM: \"${VITE_IMG_WIDTH_PARAM:-width}\"," >> /usr/share/nginx/html/config.js
 echo "  VITE_IMG_CARD_WIDTH: \"${VITE_IMG_CARD_WIDTH:-640}\"," >> /usr/share/nginx/html/config.js
 echo "  VITE_IMG_PREVIEW_WIDTH: \"${VITE_IMG_PREVIEW_WIDTH:-1280}\"," >> /usr/share/nginx/html/config.js
-echo "  VITE_CDN_URL: \"${VITE_CDN_URL}\"" >> /usr/share/nginx/html/config.js
+echo "  VITE_CDN_URL: \"${VITE_CDN_URL:-}\"" >> /usr/share/nginx/html/config.js
 echo "};" >> /usr/share/nginx/html/config.js
 
 # Generate site.webmanifest with environment variables
