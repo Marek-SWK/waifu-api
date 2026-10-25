@@ -22,7 +22,7 @@ ENV API_BASE_URL=${API_BASE_URL}
 RUN dotnet build WaifuApi.Web/WaifuApi.Web.csproj -c Release /p:OpenApiGenerateDocumentsOnBuild=true /p:Version=${VERSION}
 
 # Stage 2: Build documentation
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 WORKDIR /app
 
 ARG DOCS_URL

@@ -57,6 +57,7 @@
     "launch-editor": "^2.14.1",
     "joi": "^17.13.4",
     "@babel/core": "^7.29.6",
-    "js-yaml": "^4.2.0"
+    "js-yaml": "^4.2.0",
+    "tinypool": "2.2.0"
   }
 }
