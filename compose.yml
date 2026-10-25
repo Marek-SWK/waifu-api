@@ -1,4 +1,4 @@
-name: waifu-api-selfhosted
+name: ${COMPOSE_PROJECT_NAME:-waifu-api-selfhosted}
 services:
   backend:
     build:
@@ -27,7 +27,7 @@ services:
     environment:
       - VITE_API_URL=${API_BASE_URL}
       - VITE_DISCORD_CLIENT_ID=${DISCORD_CLIENT_ID}
-      - VITE_DISCORD_REDIRECT_URI=${FRONTEND_URL}/auth/callback
+      - VITE_DISCORD_REDIRECT_URI=${DISCORD_REDIRECT_URI}/auth/callback
       - VITE_APP_TITLE=${APP_NAME}
       - VITE_DOCS_URL=${DOCS_URL}
       - VITE_CONTACT_EMAIL=${CONTACT_EMAIL}

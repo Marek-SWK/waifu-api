@@ -28,14 +28,10 @@ dist/
 build/
 obj/
 *.log
+server.sh
 
 # Docs
 docs/node_modules
 docs/build
 docs/.docusaurus
 docs/docs/api
-
-# Local image collections
-images/
-thumbnails/
-EOF
