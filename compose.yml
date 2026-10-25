@@ -40,7 +40,7 @@ services:
       - VITE_IMG_WIDTH_PARAM=${IMG_WIDTH_PARAM}
       - VITE_IMG_CARD_WIDTH=${IMG_CARD_WIDTH}
       - VITE_IMG_PREVIEW_WIDTH=${IMG_PREVIEW_WIDTH}
-      - VITE_CDN_URL=${Cdn__BaseUrl}
+      - VITE_CDN_URL=${CDN_BASE_URL}
     ports:
       - "127.0.0.1:${FRONTEND_PORT}:80"
     depends_on:
