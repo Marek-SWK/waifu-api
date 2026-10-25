@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Run from the directory containing compose.yaml. The first argument is the
+# Run from the directory containing compose.yml. The first argument is the
 # database service name; the second is the output filename. The dump contains
 # schema and approved public content only. Site-user tables have no rows, and
 # nullable creator/uploader IDs are replaced with NULL.
