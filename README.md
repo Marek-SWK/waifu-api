@@ -3,7 +3,7 @@
     <img src="https://cdn.marek-server.com/thumbs/1280/1938.png.webp" alt="Waifu.im Logo" width="200" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
   </a>
 
-  <h1>Waifu API-Fork</h1>
+  <h1>Waifu API-Selfhosted</h1>
 
   <p>
     <strong>The versatile waifu image provider.</strong><br>
@@ -61,7 +61,7 @@ Deploy your own instance of the Waifu.im API using Docker.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/waifu-im/waifu-api.git
+   git clone https://github.com/Marek-SWK/waifu-api.git
    cd waifu-api
    ```
 
