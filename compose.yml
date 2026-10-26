@@ -2,8 +2,8 @@ name: ${COMPOSE_PROJECT_NAME:-waifu-api-selfhosted}
 services:
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: backend/Dockerfile
       args:
         VERSION: ${IMAGE_TAG}
     image: waifu-api-backend:${IMAGE_TAG}

@@ -1,0 +1,19 @@
+# Ignore everything by default
+**
+
+# Allow backend-code
+!backend/
+!backend/**
+
+# Allow only git-references
+!.git/
+!.git/HEAD
+!.git/refs/
+!.git/refs/**
+!.git/packed-refs
+
+# Don't allow any local build things or secrets
+backend/**/bin/
+backend/**/obj/
+backend/**/.env
+backend/**/.env.*
