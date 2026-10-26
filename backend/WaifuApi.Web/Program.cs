@@ -320,4 +320,45 @@ app.MapFallback(async context =>
 
     await context.Response.WriteAsync(JsonSerializer.Serialize(problemDetails));
 });
+
+app.MapGet("/version", () =>
+{
+    var assembly = typeof(Program).Assembly;
+
+    var metadata = assembly
+        .GetCustomAttributes<AssemblyMetadataAttribute>();
+
+    var commit = metadata
+        .FirstOrDefault(x => x.Key == "GitCommit")?.Value;
+
+    var builtAt = metadata
+        .FirstOrDefault(x => x.Key == "BuiltAt")?.Value;
+
+    var result = new Dictionary<string, string>
+    {
+        ["software"] =
+            Environment.GetEnvironmentVariable("INSTANCE_SOFTWARE")
+            ?? "waifu-im",
+
+        ["version"] =
+            Environment.GetEnvironmentVariable("INSTANCE_VERSION")
+            ?? "unknown"
+    };
+
+    var instanceName =
+        Environment.GetEnvironmentVariable("INSTANCE_NAME");
+
+    if (!string.IsNullOrWhiteSpace(instanceName))
+        result["instanceName"] = instanceName;
+
+    if (!string.IsNullOrWhiteSpace(commit))
+        result["commit"] = commit;
+
+    if (!string.IsNullOrWhiteSpace(builtAt))
+        result["builtAt"] = builtAt;
+
+    return Results.Ok(result);
+})
+.AllowAnonymous();
+
 app.Run();

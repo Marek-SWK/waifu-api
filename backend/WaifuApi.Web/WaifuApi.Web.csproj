@@ -18,6 +18,18 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <AssemblyMetadata
+      Include="GitCommit"
+      Value="$(AppCommit)"
+      Condition="'$(AppCommit)' != ''" />
+
+    <AssemblyMetadata
+      Include="BuiltAt"
+      Value="$(AppBuiltAt)"
+      Condition="'$(AppBuiltAt)' != ''" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

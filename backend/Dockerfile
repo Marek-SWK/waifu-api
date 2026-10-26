@@ -2,6 +2,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
+# Set build arguments for commit hash and build timestamp
+ARG APP_COMMIT=
+ARG APP_BUILT_AT=
+
 # Version passed from CI (calculated from git tags)
 ARG VERSION=0.0.0-local
 
@@ -20,7 +24,7 @@ COPY . .
 
 # Build and publish with explicit version
 WORKDIR "/src/WaifuApi.Web"
-RUN dotnet publish "WaifuApi.Web.csproj" -c Release -o /app/publish /p:UseAppHost=false /p:Version=${VERSION} /p:OpenApiGenerateDocumentsOnBuild=false
+RUN dotnet publish "WaifuApi.Web.csproj" -c Release -o /app/publish /p:UseAppHost=false /p:Version=${VERSION} /p:OpenApiGenerateDocumentsOnBuild=false /p:AppCommit="${APP_COMMIT}" /p:AppBuiltAt="${APP_BUILT_AT}"
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
