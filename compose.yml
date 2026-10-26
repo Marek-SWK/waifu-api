@@ -26,12 +26,12 @@ services:
     image: waifu-api-frontend:${IMAGE_TAG}
     environment:
       - VITE_API_URL=${API_BASE_URL}
-      - VITE_DISCORD_CLIENT_ID=${DISCORD_CLIENT_ID}
-      - VITE_DISCORD_REDIRECT_URI=${DISCORD_REDIRECT_URI}/auth/callback
+      - VITE_DISCORD_CLIENT_ID=${Discord__ClientId}
+      - VITE_DISCORD_REDIRECT_URI=${Discord__RedirectUri}
       - VITE_APP_TITLE=${APP_NAME}
       - VITE_DOCS_URL=${DOCS_URL}
       - VITE_CONTACT_EMAIL=${CONTACT_EMAIL}
-      - VITE_DISCORD_SERVER_URL=${DISCORD_SERVER_URL}
+      - VITE_DISCORD_SERVER_URL=${Discord__ServerUrl}
       - VITE_STATUS_URL=${STATUS_URL}
       - VITE_GITHUB_URL=${GITHUB_URL}
       - VITE_TOS_URL=${DOCS_URL}/docs/terms-of-service
@@ -40,7 +40,7 @@ services:
       - VITE_IMG_WIDTH_PARAM=${IMG_WIDTH_PARAM}
       - VITE_IMG_CARD_WIDTH=${IMG_CARD_WIDTH}
       - VITE_IMG_PREVIEW_WIDTH=${IMG_PREVIEW_WIDTH}
-      - VITE_CDN_URL=${CDN_BASE_URL}
+      - VITE_CDN_URL=${Cdn__BaseUrl}
     ports:
       - "127.0.0.1:${FRONTEND_PORT}:80"
     depends_on:

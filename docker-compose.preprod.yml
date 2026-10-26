@@ -36,7 +36,7 @@ services:
       - VITE_IMG_WIDTH_PARAM=${IMG_WIDTH_PARAM}
       - VITE_IMG_CARD_WIDTH=${IMG_CARD_WIDTH}
       - VITE_IMG_PREVIEW_WIDTH=${IMG_PREVIEW_WIDTH}
-      - VITE_IMG_URL=${Cdn__BaseUrl}
+      - VITE_IMG_URL=${CDN_BASE_URL}
     ports:
       - "${FRONTEND_PORT}:80"
     depends_on:
