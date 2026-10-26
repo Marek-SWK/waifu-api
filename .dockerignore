@@ -12,8 +12,12 @@
 !.git/refs/**
 !.git/packed-refs
 
-# Don't allow any local build things or secrets
-backend/**/bin/
-backend/**/obj/
-backend/**/.env
-backend/**/.env.*
+# Local build data
+**/bin/
+**/obj/
+**/.vs/
+**/.idea/
+
+# Private files
+**/.env
+**/.env.*

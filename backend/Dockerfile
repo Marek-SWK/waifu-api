@@ -18,7 +18,7 @@ COPY backend/WaifuApi.Domain/WaifuApi.Domain.csproj backend/WaifuApi.Domain/
 COPY backend/WaifuApi.Infrastructure/WaifuApi.Infrastructure.csproj backend/WaifuApi.Infrastructure/
 
 # Restore dependencies
-RUN dotnet restore "WaifuApi.Web/WaifuApi.Web.csproj"
+RUN dotnet restore "backend/WaifuApi.Web/WaifuApi.Web.csproj"
 
 # Copy the rest of the source code
 COPY . .
