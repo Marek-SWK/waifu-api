@@ -353,6 +353,7 @@ app.MapGet("/", () =>
 
     return Results.Ok(result);
 })
+.AllowAnonymous();
 
 app.MapGet("/version", () =>
 {
