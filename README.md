@@ -12,7 +12,7 @@
 
   <p>
     <a href="https://waifu.marek-server.com"><strong>Website</strong></a> •
-    <a href="https://docs.marek-server.com"><strong>Documentation (WIP)</strong></a> •
+    <a href="https://waifu-docs.marek-server.com"><strong>Documentation</strong></a> •
     <a href="https://marek-server.com/contact/"><strong>Support</strong></a>
   </p>
 
@@ -53,7 +53,7 @@ Deploy your own instance of the Waifu.im API using Docker.
 
 - [Docker](https://docs.docker.com/get-docker/) & [Docker Compose](https://docs.docker.com/compose/install/)
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) (for local backend dev)
-- [Node.js 20+](https://nodejs.org/) (for local frontend dev)
+- [Node.js 22+](https://nodejs.org/) (for local frontend dev)
 - A [Discord Application](https://discord.com/developers/applications) (for authentication)
 - S3-Compatible Storage (AWS S3, MinIO, Scaleway, etc.)
 
