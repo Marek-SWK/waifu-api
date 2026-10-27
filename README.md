@@ -1,13 +1,14 @@
 <div align="center">
   <a href="https://waifu.marek-server.com">
-    <img src="https://cdn.marek-server.com/thumbs/1280/1938.png.webp" alt="Waifu.im Logo" width="200" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+    <img src="https://cdn.marek-server.com/thumbs/640/1938.png.webp" alt="Waifu.im Logo" width="200" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
   </a>
 
   <h1>Waifu API-Selfhosted</h1>
 
   <p>
     <strong>The versatile waifu image provider.</strong><br>
-    Access a curated archive of over 4000 anime-style images with powerful filtering.
+    Access a curated archive of over 4000 anime-style images with powerful filtering.<br>
+    Now Selfhosted
   </p>
 
   <p>
