@@ -334,7 +334,7 @@ app.MapGet("/", () =>
     var builtAt = metadata
         .FirstOrDefault(x => x.Key == "BuiltAt")?.Value;
 
-    var result = new Dictionary<string, string>
+    var result = new Dictionary<string, object>
     {
         ["software"] =
             Environment.GetEnvironmentVariable("INSTANCE_SOFTWARE")
@@ -342,7 +342,12 @@ app.MapGet("/", () =>
 
         ["version"] =
             Environment.GetEnvironmentVariable("INSTANCE_VERSION")
-            ?? "unknown"
+            ?? "unknown",
+
+        ["links"] = new Dictionary<string, string>
+        {
+            ["version"] = "/version"
+        }
     };
 
     if (!string.IsNullOrWhiteSpace(commit))
@@ -378,12 +383,6 @@ app.MapGet("/version", () =>
             Environment.GetEnvironmentVariable("INSTANCE_VERSION")
             ?? "unknown"
     };
-
-    var instanceName =
-        Environment.GetEnvironmentVariable("INSTANCE_NAME");
-
-    if (!string.IsNullOrWhiteSpace(instanceName))
-        result["instanceName"] = instanceName;
 
     if (!string.IsNullOrWhiteSpace(commit))
         result["commit"] = commit;
