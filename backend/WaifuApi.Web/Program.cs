@@ -334,12 +334,6 @@ app.MapGet("/", () =>
     var builtAt = metadata
         .FirstOrDefault(x => x.Key == "BuiltAt")?.Value;
 
-    if (!string.IsNullOrWhiteSpace(builtAt))
-        result["builtAt"] = builtAt;
-
-    if (!string.IsNullOrWhiteSpace(commit))
-        result["commit"] = commit;
-
     var result = new Dictionary<string, object>
     {
         ["software"] =
@@ -361,6 +355,12 @@ app.MapGet("/", () =>
         }
     };
 
+    if (!string.IsNullOrWhiteSpace(builtAt))
+        result["builtAt"] = builtAt;
+
+    if (!string.IsNullOrWhiteSpace(commit))
+        result["commit"] = commit;
+
     return Results.Ok(result);
 })
 .AllowAnonymous();
@@ -378,12 +378,6 @@ app.MapGet("/version", () =>
     var builtAt = metadata
         .FirstOrDefault(x => x.Key == "BuiltAt")?.Value;
 
-    if (!string.IsNullOrWhiteSpace(builtAt))
-        result["builtAt"] = builtAt;
-
-    if (!string.IsNullOrWhiteSpace(commit))
-        result["commit"] = commit;
-
     var result = new Dictionary<string, string>
     {
         ["software"] =
@@ -394,6 +388,12 @@ app.MapGet("/version", () =>
             Environment.GetEnvironmentVariable("INSTANCE_VERSION")
             ?? "unknown"
     };
+
+    if (!string.IsNullOrWhiteSpace(builtAt))
+        result["builtAt"] = builtAt;
+
+    if (!string.IsNullOrWhiteSpace(commit))
+        result["commit"] = commit;
 
     return Results.Ok(result);
 })
