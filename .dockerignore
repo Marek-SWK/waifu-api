@@ -20,8 +20,7 @@
 
 # Private files
 **/.env
-**/.env.*
 
-# ImageSharp-License
-**/sixlabors.lic
-!backend/WaifuApi.Infrastructure/sixlabors.lic
+# Allow documentation source
+!docs/
+!docs/**
