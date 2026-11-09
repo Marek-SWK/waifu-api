@@ -19,6 +19,7 @@ COPY backend/ .
 # Generate OpenAPI spec with CI environment
 ENV ASPNETCORE_ENVIRONMENT=CI
 ENV API_BASE_URL=${API_BASE_URL}
+ENV WAIFU_OPENAPI_GENERATION=1
 RUN dotnet build WaifuApi.Web/WaifuApi.Web.csproj -c Release /p:OpenApiGenerateDocumentsOnBuild=true /p:Version=${VERSION}
 
 # Stage 2: Build documentation

@@ -261,26 +261,36 @@ builder.Services.AddAuthorization(options =>
         (c.Value == Role.Admin.ToString() || c.Value == Role.Moderator.ToString()))));
 });
 
-// Register the background service for stats cleanup
-builder.Services.AddHostedService<StatsCleanupService>();
+// OpenAPI generation must not start background services or access the database.
+var isOpenApiGeneration =
+Environment.GetEnvironmentVariable("WAIFU_OPENAPI_GENERATION") == "1";
 
-// Prune resolved review tasks past their retention window.
-builder.Services.AddHostedService<ReviewTaskCleanupService>();
+if (!isOpenApiGeneration)
+{
+    // Register the background service for stats cleanup
+    builder.Services.AddHostedService<StatsCleanupService>();
+
+    // Prune resolved review tasks past their retention window.
+    builder.Services.AddHostedService<ReviewTaskCleanupService>();
+}
 
 var app = builder.Build();
 
 app.UsePathBase(basePath);
 
-using (var scope = app.Services.CreateScope())
+if (!isOpenApiGeneration)
 {
-    try 
+    using (var scope = app.Services.CreateScope())
     {
-        var dbContext = scope.ServiceProvider.GetRequiredService<WaifuDbContext>();
-        dbContext.Database.Migrate();
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Migration failed: {ex.Message}");
+        try
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<WaifuDbContext>();
+            dbContext.Database.Migrate();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Migration failed: {ex.Message}");
+        }
     }
 }
 
