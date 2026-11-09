@@ -363,6 +363,8 @@ app.MapGet("/", () =>
 
     return Results.Ok(result);
 })
+.WithName("GetApiRoot")
+.WithSummary("API root endpoint")
 .AllowAnonymous();
 
 app.MapGet("/version", () =>
@@ -397,6 +399,9 @@ app.MapGet("/version", () =>
 
     return Results.Ok(result);
 })
+.WithName("GetApiVersion")
+.WithSummary("Get API version")
 .AllowAnonymous();
+
 
 app.Run();

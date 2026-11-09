@@ -12,15 +12,19 @@
 !.git/refs/**
 !.git/packed-refs
 
+# Docs
+!docs/
+!docs/**
+
 # Local build data
 **/bin/
 **/obj/
 **/.vs/
 **/.idea/
+**/build/
+**/.docusaurus/
+**/node_modules/
 
 # Private files
 **/.env
-
-# Allow documentation source
-!docs/
-!docs/**
+**/.env.*
